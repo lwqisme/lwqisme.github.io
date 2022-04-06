@@ -395,7 +395,7 @@ th {
 
 ::selection {
   color: #FFFFFF;
-  background-color: #42b983;
+  background-color: #ca4a23;
 }
 
 html, body {
@@ -431,7 +431,7 @@ a, a:active {
 a.nav-list-link.active,
 a.nav-list-link:hover,
 a.post-title-link:hover {
-  border-bottom: 2px solid #42b983;
+  border-bottom: 2px solid #ca4a23;
 }
 
 hr {
@@ -527,12 +527,12 @@ header .nav-list-item a {
 .archive .post-title-link {
   display: block;
   margin-left: 125px;
-  color: #42b983;
+  color: #ca4a23;
   word-break: break-all;
 }
 .archive .post-title-link:hover {
   border-bottom: 0;
-  color: #267B54;
+  color: #b1400c;
 }
 .archive .post-info {
   float: left;
@@ -546,14 +546,14 @@ header .nav-list-item a {
 
 .post-block .post-title {
   display: inline-block;
-  margin: 0.65em 0;
+  margin: 0.45em 0;
   color: #2c3e50;
   font-size: 1.5em;
 }
 .post-block .post-info {
   display: inline-block;
   color: #7f8c8d;
-  margin: 1.2em 0;
+  margin: 0.75em 1em;
 }
 .post-block .post-info span {
   margin-left: 0.5rem;
@@ -565,6 +565,16 @@ header .nav-list-item a {
   font-size: 12px;
   color: white;
   background-color: #E36B6B;
+}
+.post-block .tag-container {
+  display: inline-block;
+}
+.post-block .tag-container .tag-item {
+  display: inline-block;
+  color: #a4a8a8;
+  font-size: 0.3rem;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
 }
 
 .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
@@ -949,8 +959,9 @@ footer .copyright a:hover {
 }
 
 .tagctt .tags-count {
-  font-size: 2rem;
+  font-size: 1.25rem;
   padding: 2px 0 0 25px;
+  margin-bottom: 1em;
 }
 .tagctt .tag-item {
   display: block;
@@ -959,7 +970,7 @@ footer .copyright a:hover {
 }
 .tagctt .tag-item:hover {
   border-bottom: 0;
-  color: #a8240c;
+  color: #b1400c;
 }
 
 @font-face {
