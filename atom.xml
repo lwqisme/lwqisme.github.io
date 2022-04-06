@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-04-04T15:47:40.288Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://example.com/2022/04/04/test/"/>
+    <id>http://example.com/2022/04/04/test/</id>
+    <published>2022-04-04T06:40:28.000Z</published>
+    <updated>2022-04-04T15:47:40.288Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="字节飞书面经（一面挂）"><a href="#字节飞书面经（一面挂）" class="headerlink" title="字节飞书面经（一面挂）"></a>字节飞书面经（一面挂）</h1><h2 id="直接算法："><a href="#直接算法：" class="headerlink" title="直接算法："></a>直接算法：</h2><p>10G文件，每一行一个uint32数字。有一台1G内存的机器</p><ol><li>找出最大的100个数</li><li>找出所有重复数字<br>打题：143. 重排链表 - 力扣（LeetCode） (leetcode-cn.com)</li></ol><h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><ul><li>问一下你这个java的东西，你了解hashmap吗，它是怎么样存储东西的，扩容是怎么样的呢</li><li>java的继承你了解吗，抽象是怎么抽象的</li></ul><h2 id="sql"><a href="#sql" class="headerlink" title="sql"></a>sql</h2><ul><li>给你一个表，有三个列，分别为id, userid, createtime<ul><li>查询单个用户的id</li><li>查询用户的创建时间</li><li>查询每一天内的所有用户<br>要怎么创建索引？</li></ul></li><li>给你如下的表，写一个sql语句查询一下有多少种不同的score<br>id | score<br>1  |   23<br>2  | 32<br>3  | 23<br>4  | 43<br>5  | 32</li></ul><h2 id="尝试插入图片！"><a href="#尝试插入图片！" class="headerlink" title="尝试插入图片！"></a>尝试插入图片！</h2><p><img src="/2022/04/04/test/6b8c14f8gy1gk9ibdkyqqj21gs0u0gxd.jpg"></p>]]></content>
+    
+    
+    <summary type="html">这是一段简介。</summary>
+    
+    
+    
+    
+    <category term="面经" scheme="http://example.com/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+    <category term="字节" scheme="http://example.com/tags/%E5%AD%97%E8%8A%82/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2022/04/04/hello-world/"/>
+    <id>http://example.com/2022/04/04/hello-world/</id>
+    <published>2022-04-04T06:28:04.244Z</published>
+    <updated>2022-04-04T06:28:04.244Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
