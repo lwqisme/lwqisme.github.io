@@ -71,8 +71,13 @@
 
 <p>部署，按照顺序依次是：清除缓存、重新生成部署文件、部署</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>到此就正式部署完成了</p>
-<h3 id="五、更换主题"><a href="#五、更换主题" class="headerlink" title="五、更换主题"></a>五、更换主题</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">hexo官网主题</a><br><a target="_blank" rel="noopener" href="https://easyhexo.com/2-Theme-use-and-config/">非官网主题推荐网站</a></p>
+<p>到此就正式部署完成了，但还有一步！</p>
+<p><strong>如果部署到自己服务器</strong>，需要配置开头安装了的nginx，否则通过ip无法访问到。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    listen [::]:80;</span><br><span class="line">    root /var/www/hexo; # 修改为自己的www下的文件夹</span><br><span class="line">    server_name blog.aqcloud.ltd; # 自己的域名</span><br><span class="line">    location / &#123;</span><br><span class="line">            # First attempt to serve request as file, then</span><br><span class="line">            # as directory, then fall back to displaying a 404.</span><br><span class="line">            try_files $uri $uri/ =404;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其余地方无需修改，随后重启nignx即可通过服务器ip访问到。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br></pre></td></tr></table></figure>
+
+<h4 id="到此已经全部部署完毕，后面是对网页的一些修改添加。"><a href="#到此已经全部部署完毕，后面是对网页的一些修改添加。" class="headerlink" title="到此已经全部部署完毕，后面是对网页的一些修改添加。"></a>到此已经全部部署完毕，后面是对网页的一些修改添加。</h4><h3 id="五、更换主题"><a href="#五、更换主题" class="headerlink" title="五、更换主题"></a>五、更换主题</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">hexo官网主题</a><br><a target="_blank" rel="noopener" href="https://easyhexo.com/2-Theme-use-and-config/">非官网主题推荐网站</a></p>
 <p>按照使用说明，将主题clone到<code>themes/</code>文件夹下。<br>如果想要自己修改主题，可以将别人的主题fork下来再clone。</p>
 <p>随后在<code>_config.yml</code>中配置使用主题<br>(apollo是我编写此文时使用的主题)</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">apollo</span></span><br></pre></td></tr></table></figure>
@@ -80,4 +85,17 @@
 <p>随后重新</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 <p>使用<code>hexo d</code>部署，使用<code>hexo s</code>本地运行。</p>
+<h3 id="六、设置评论区"><a href="#六、设置评论区" class="headerlink" title="六、设置评论区"></a>六、设置评论区</h3><p>到github创建一个public库，并且安装<a target="_blank" rel="noopener" href="https://github.com/apps/utterances">utterances app</a>到这个库中</p>
+<p>在你想要展示的页面下增加（username是你自己的github用户名，reponame是你刚刚创建的那个public库的库名）： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;https://utteranc.es/client.js&quot;</span></span><br><span class="line">        repo=<span class="string">&quot;username/reponame&quot;</span></span><br><span class="line">        issue-term=<span class="string">&quot;pathname&quot;</span></span><br><span class="line">        theme=<span class="string">&quot;github-light&quot;</span></span><br><span class="line">        crossorigin=<span class="string">&quot;anonymous&quot;</span></span><br><span class="line">        <span class="keyword">async</span>&gt;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="七、新增页面"><a href="#七、新增页面" class="headerlink" title="七、新增页面"></a>七、新增页面</h3><p>我自己使用了新建tags的页面，参考了<a target="_blank" rel="noopener" href="https://www.voidking.com/dev-hexo-categories/">Hexo添加categories页面</a>。<br>大致流程是：</p>
+<ol>
+<li><code>hexo new page tags</code> </li>
+<li>修改主题的config当中的menu </li>
+<li><code>tags/index.md</code>中的头，type和layout都改成<code>tags</code> </li>
+<li>到<code>apollo/layout</code>中新建<code>tags.jade</code>，仿造其他页面的写法写一个，这时能在页面中暗道<code>tags.jade</code>写的内容即成功</li>
+<li>到scss目录写样式，最后记得给<code>apollo.scss</code>compile一下。</li>
+</ol>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/70bf58c48010">HEXO 部署到云服务器详细指南</a><br><a target="_blank" rel="noopener" href="https://cnhuazhu.top/butterfly/2021/01/21/Hexo%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">Hexo快速搭建一个博客</a><br><a target="_blank" rel="noopener" href="https://blog.njilc.com/post/self-hosted-utterances-tutorial">自托管Utterances教程</a></p>
 </div></article></div><div class="commit-mention"> <p>✨评论区请友好整活...</p></div><script src="https://utteranc.es/client.js" repo="lwqisme/aq-hexo-utterances" issue-term="pathname" theme="github-light" crossorigin="anonymous" async>></script></main><footer><div class="paginator"><a href="/2022/04/07/feishu-interview-20220318/" class="prev">PREV</a><a href="/2022/04/04/hello-world/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2022 <a href="http://example.com">John Doe</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
