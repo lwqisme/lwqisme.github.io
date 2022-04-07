@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-04T15:47:40.288Z</updated>
+  <updated>2022-04-04T06:28:04.244Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://example.com/2022/04/04/test/"/>
-    <id>http://example.com/2022/04/04/test/</id>
-    <published>2022-04-04T06:40:28.000Z</published>
-    <updated>2022-04-04T15:47:40.288Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="字节飞书面经（一面挂）"><a href="#字节飞书面经（一面挂）" class="headerlink" title="字节飞书面经（一面挂）"></a>字节飞书面经（一面挂）</h1><h2 id="直接算法："><a href="#直接算法：" class="headerlink" title="直接算法："></a>直接算法：</h2><p>10G文件，每一行一个uint32数字。有一台1G内存的机器</p><ol><li>找出最大的100个数</li><li>找出所有重复数字<br>打题：143. 重排链表 - 力扣（LeetCode） (leetcode-cn.com)</li></ol><h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><ul><li>问一下你这个java的东西，你了解hashmap吗，它是怎么样存储东西的，扩容是怎么样的呢</li><li>java的继承你了解吗，抽象是怎么抽象的</li></ul><h2 id="sql"><a href="#sql" class="headerlink" title="sql"></a>sql</h2><ul><li>给你一个表，有三个列，分别为id, userid, createtime<ul><li>查询单个用户的id</li><li>查询用户的创建时间</li><li>查询每一天内的所有用户<br>要怎么创建索引？</li></ul></li><li>给你如下的表，写一个sql语句查询一下有多少种不同的score<br>id | score<br>1  |   23<br>2  | 32<br>3  | 23<br>4  | 43<br>5  | 32</li></ul><h2 id="尝试插入图片！"><a href="#尝试插入图片！" class="headerlink" title="尝试插入图片！"></a>尝试插入图片！</h2><p><img src="/2022/04/04/test/6b8c14f8gy1gk9ibdkyqqj21gs0u0gxd.jpg"></p>]]></content>
-    
-    
-    <summary type="html">这是一段简介。</summary>
-    
-    
-    
-    
-    <category term="面经" scheme="http://example.com/tags/%E9%9D%A2%E7%BB%8F/"/>
-    
-    <category term="字节" scheme="http://example.com/tags/%E5%AD%97%E8%8A%82/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>

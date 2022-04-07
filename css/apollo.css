@@ -581,6 +581,11 @@ header .nav-list-item a {
   margin-left: 0.2rem;
 }
 
+.commit-mention {
+  color: #7f8c8d;
+  font-size: 1.2rem;
+}
+
 .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
   position: relative;
   margin: 1em 0;
@@ -604,13 +609,13 @@ header .nav-list-item a {
   font-size: 18px;
 }
 .post-content a {
-  color: #42b983;
+  color: #ca4a23;
   word-break: break-all;
 }
 .post-content blockquote {
   margin: 2em 0;
   padding-left: 20px;
-  border-left: 4px solid #42b983;
+  border-left: 4px solid #ca4a23;
 }
 .post-content img {
   display: block;
@@ -844,7 +849,7 @@ pre .apache .tag,
 pre .apache .cbracket,
 pre .tex .command,
 pre .prompt {
-  color: #42b983;
+  color: #ca4a23;
 }
 pre .comment,
 pre .java .annotation,

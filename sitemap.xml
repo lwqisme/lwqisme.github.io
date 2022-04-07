@@ -11,15 +11,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/04/04/test/</loc>
-    
-    <lastmod>2022-04-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2022/04/04/hello-world/</loc>
     
     <lastmod>2022-04-04</lastmod>
@@ -31,25 +22,11 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2022-04-06</lastmod>
+    <lastmod>2022-04-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  
-  <url>
-    <loc>http://example.com/tags/%E9%9D%A2%E7%BB%8F/</loc>
-    <lastmod>2022-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/%E5%AD%97%E8%8A%82/</loc>
-    <lastmod>2022-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 
   
