@@ -1,3 +1,4 @@
+http://example.com/2022/04/07/psqlLab-pitfall/
 http://example.com/2022/04/07/feishu-interview-20220318/
 http://example.com/2022/04/07/hexo-from-0to1/
 http://example.com/tags/index.html
@@ -6,3 +7,5 @@ http://example.com/
 http://example.com/tags/%E9%9D%A2%E7%BB%8F/
 http://example.com/tags/%E9%A3%9E%E4%B9%A6/
 http://example.com/tags/Hexo/
+http://example.com/tags/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/
+http://example.com/tags/postgreSQL/

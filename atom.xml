@@ -57,6 +57,27 @@
   </entry>
   
   <entry>
+    <title>psqlLab配置踩坑记录</title>
+    <link href="http://example.com/2022/04/07/psqlLab-pitfall/"/>
+    <id>http://example.com/2022/04/07/psqlLab-pitfall/</id>
+    <published>2022-04-07T02:55:23.000Z</published>
+    <updated>2022-05-10T04:50:02.689Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文的基础是 <a href="https://blog.miigon.net/posts/postgresql-source-compilation-guide/">数据库内核课程 PostgreSQL 12.5 源码安装避坑 guide</a>，miigon大佬的博客。我在此基础上加一些自己的问题归纳。</p></blockquote><h3 id="make-install时，如果失败可以尝试-make-NO-PGXS-1-install"><a href="#make-install时，如果失败可以尝试-make-NO-PGXS-1-install" class="headerlink" title="make install时，如果失败可以尝试 make NO_PGXS=1 install"></a><code>make install</code>时，如果失败可以尝试 <code>make NO_PGXS=1 install</code></h3><p>构建时出错的问题</p><h3 id="data文件夹需要修改拥有者和权限"><a href="#data文件夹需要修改拥有者和权限" class="headerlink" title="data文件夹需要修改拥有者和权限"></a>data文件夹需要修改拥有者和权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p <span class="string">&quot;<span class="variable">$PGDATA</span>&quot;</span></span><br><span class="line"><span class="built_in">chown</span> -R 用户名 <span class="string">&quot;<span class="variable">$PGDATA</span>&quot;</span></span><br><span class="line"><span class="built_in">chmod</span> 700 <span class="string">&quot;<span class="variable">$PGDATA</span>&quot;</span></span><br></pre></td></tr></table></figure><h3 id="自己写的sql需要进入psql中执行脚本才能生效"><a href="#自己写的sql需要进入psql中执行脚本才能生效" class="headerlink" title="自己写的sql需要进入psql中执行脚本才能生效"></a>自己写的sql需要进入psql中执行脚本才能生效</h3><p>比如说我在 <code>intset.source</code> 定义了新类型的结构，如果不生效，就进入到 <code>intset.source</code> 的文件夹去，psql，然后执行 <code>\i intset.source</code></p><h3 id="遇到修改不生效的问题"><a href="#遇到修改不生效的问题" class="headerlink" title="遇到修改不生效的问题"></a>遇到修改不生效的问题</h3><p>遇到修改不生效的问题，可以直接删data包，重新initdb</p><h3 id="gitignore请指定-否则会导致群体攻击"><a href="#gitignore请指定-否则会导致群体攻击" class="headerlink" title="gitignore请指定./ 否则会导致群体攻击"></a>gitignore请指定<code>./</code> 否则会导致群体攻击</h3><p>之前直接写了<code>/data</code>，把我所有的名字为data的文件夹都忽略了。。</p>]]></content>
+    
+    
+    <summary type="html">秦健斌老师的postsql课配置踩坑（不包含代码细节）</summary>
+    
+    
+    
+    
+    <category term="自学课程" scheme="http://example.com/tags/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="postgreSQL" scheme="http://example.com/tags/postgreSQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://example.com/2022/04/04/hello-world/"/>
     <id>http://example.com/2022/04/04/hello-world/</id>
