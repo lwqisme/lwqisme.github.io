@@ -1,4 +1,4 @@
-http://example.com/2022/04/07/psqlLab-pitfall/
+http://example.com/2022/05/10/psqlLab-pitfall/
 http://example.com/2022/04/07/feishu-interview-20220318/
 http://example.com/2022/04/07/hexo-from-0to1/
 http://example.com/tags/index.html
