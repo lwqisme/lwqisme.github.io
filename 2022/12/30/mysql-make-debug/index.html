@@ -51,7 +51,7 @@
 <li>安装 gdbserver, <code>yum install gdb-gdbserver</code></li>
 <li>启动 ssh 服务端, 通常默认已经启动</li>
 </ul>
-<h3 id="二、vscode-ssh打开对应的文件夹"><a href="#二、vscode-ssh打开对应的文件夹" class="headerlink" title="二、vscode ssh打开对应的文件夹"></a>二、vscode ssh打开对应的文件夹</h3><p><img src="/mysql-debug/1672387417253.png" alt="1672387417253"></p>
+<h3 id="二、vscode-ssh打开对应的文件夹"><a href="#二、vscode-ssh打开对应的文件夹" class="headerlink" title="二、vscode ssh打开对应的文件夹"></a>二、vscode ssh打开对应的文件夹</h3><p><img src="/mysql-make-debug/1672387417253.png" alt="1672387417253"></p>
 <h3 id="三、关闭正在运行的mysqld实例"><a href="#三、关闭正在运行的mysqld实例" class="headerlink" title="三、关闭正在运行的mysqld实例"></a>三、关闭正在运行的mysqld实例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld stop</span><br></pre></td></tr></table></figure>
 
 <h3 id="四、创建debug用的配置文件"><a href="#四、创建debug用的配置文件" class="headerlink" title="四、创建debug用的配置文件"></a>四、创建debug用的配置文件</h3><p><strong>client端配置：</strong></p>
@@ -64,28 +64,28 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gdbserver localhost:2333 /usr/local/mysql/bin/mysqld --defaults-file=/etc/my.cnf --user=mysql</span><br><span class="line">或者</span><br><span class="line">gdbserver localhost:2333 /usr/local/mysql/bin/mysqld --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data</span><br><span class="line">随便挑一个吧，我也忘记了是哪个才能启动成功了。</span><br><span class="line">按理说两个是一样的，因为基本信息都在my.cnf配置好了。</span><br></pre></td></tr></table></figure>
 
 <p>然后对应输出：</p>
-<p><img src="/mysql-debug/1672387457515.png" alt="1672387457515"></p>
+<p><img src="/mysql-make-debug/1672387457515.png" alt="1672387457515"></p>
 <p>此时就可以开始使用vscode进行debug了。</p>
 <p><strong>client端：</strong></p>
-<p><img src="/mysql-debug/1672387450640.png" alt="1672387450640"></p>
+<p><img src="/mysql-make-debug/1672387450640.png" alt="1672387450640"></p>
 <p>output界面出现这个提示，先点继续，跳过：</p>
-<p><img src="/mysql-debug/1672387521873.png" alt="1672387521873"></p>
+<p><img src="/mysql-make-debug/1672387521873.png" alt="1672387521873"></p>
 <p>然后就运行到我自己打的断点处了！</p>
-<p><img src="/mysql-debug/1672387529970.png" alt="1672387529970"></p>
+<p><img src="/mysql-make-debug/1672387529970.png" alt="1672387529970"></p>
 <p>继续点击继续按钮</p>
 <p>直至显示这样的输出以及表示正在运行：</p>
-<p><img src="/mysql-debug/1672387653592.png" alt="1672387653592"></p>
+<p><img src="/mysql-make-debug/1672387653592.png" alt="1672387653592"></p>
 <p>这时候回头看开启gdbserver的服务器，显示ready for connections，那就是成功了。</p>
-<p><img src="/mysql-debug/1672387670235.png" alt="1672387670235"></p>
+<p><img src="/mysql-make-debug/1672387670235.png" alt="1672387670235"></p>
 <p>这时候可以去连接3306端口登录服务器，也是成功的：</p>
-<p><img src="/mysql-debug/1672387688684.png" alt="1672387688684"></p>
+<p><img src="/mysql-make-debug/1672387688684.png" alt="1672387688684"></p>
 <p>大功告成！</p>
 <h2 id="遇到的一些问题"><a href="#遇到的一些问题" class="headerlink" title="遇到的一些问题"></a>遇到的一些问题</h2><p>debug运行过程出现了这个问题：</p>
-<p><img src="/mysql-debug/1672387701600.png" alt="1672387701600"></p>
+<p><img src="/mysql-make-debug/1672387701600.png" alt="1672387701600"></p>
 <p>有可能是启动了多个mysql实例，然后使用的同一份配置导致冲突了。尝试将ibdata1文件删掉（这是错误的做法），后面只能重新安装。</p>
 <p>另一个问题：</p>
 <p>重新make install之后启动，出现了这个问题：</p>
-<p><img src="/mysql-debug/1672387711554.png" alt="1672387711554"></p>
+<p><img src="/mysql-make-debug/1672387711554.png" alt="1672387711554"></p>
 <p>这时候把my.cnf里的socket路径换掉：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[client]</span><br><span class="line">socket = /tmp/mysqly.socok</span><br><span class="line">user = root</span><br><span class="line">password = 1024</span><br><span class="line">port = 3306</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">socket = /tmp/mysqly.sock</span><br><span class="line">basedir = /usr/local/mysql</span><br><span class="line">datadir = /usr/local/mysql/data</span><br></pre></td></tr></table></figure>
 
