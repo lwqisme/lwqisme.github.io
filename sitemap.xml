@@ -4,7 +4,7 @@
   <url>
     <loc>http://example.com/2022/12/30/mysql-make-debug/</loc>
     
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2023-01-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +58,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2023-01-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -66,42 +66,42 @@
   
   <url>
     <loc>http://example.com/tags/%E9%9D%A2%E7%BB%8F/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2023-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%E9%A3%9E%E4%B9%A6/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2023-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Hexo/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2023-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/MySQL/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2023-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%E8%87%AA%E5%AD%A6%E8%AF%BE%E7%A8%8B/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2023-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/postgreSQL/</loc>
-    <lastmod>2022-12-30</lastmod>
+    <lastmod>2023-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
